@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced DOM Manipulation Showcase</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+    #output { margin-top: 20px; padding: 10px; border: 1px solid #222; background: #f9f9f9; }
+    .highlight { background: yellow; }
+    .myDiv { border: 2px solid #3498db; padding: 10px; margin-bottom: 10px; cursor: pointer; }
+    .editing { outline: 2px dashed #f39c12; }
+    .colored { background: #c8e6c9; }
+    #observer-log { margin-top: 15px; font-size: 0.9em; color: #00796b; max-height: 70px; overflow: auto; border: 1px dashed #00796b; background: #e0f2f1;}
+  </style>
+</head>
+<body>
+  <h1>Advanced DOM Manipulation Showcase</h1>
+  <p>Explore deeper DOM concepts: editing, styling, attributes, traversal, event delegation, and mutation observers.</p>
+  <button id="add-div">Add New DIV</button>
+  <button id="rm-div">Remove Last DIV</button>
+  <button id="color-divs">Random Color</button>
+  <button id="reset-colors">Reset Colors</button>
+
+  <div id="container">
+    <div class="myDiv" data-index="1">This is a sample DIV element</div>
+  </div>
+
+  <div id="output"></div>
+  <div id="observer-log"></div>
+  <script src="dom-demo-enhanced.js"></script>
+</body>
+</html>
+
