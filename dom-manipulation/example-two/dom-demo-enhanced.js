@@ -1,5 +1,11 @@
 // dom-demo-enhanced.js
 
+// --- DOM Manipulation and MutationObserver Demo ---
+
+// This script demonstrates dynamic DOM manipulation, event handling, and observing DOM changes using MutationObserver.
+// It allows adding/removing DIVs, changing their colors, editing content inline, and logs changes in the DOM structure.
+
+// Get references to DOM elements
 const container = document.getElementById('container');
 const addBtn = document.getElementById('add-div');
 const rmBtn = document.getElementById('rm-div');
@@ -8,10 +14,17 @@ const resetBtn = document.getElementById('reset-colors');
 const output = document.getElementById('output');
 const observerLog = document.getElementById('observer-log');
 
+// ----------------------------------------------------------------
+// Functionality Implementation
+
+// Initialize variables
 let divCount = 1;
 const colors = ["#c8e6c9", "#ffe0b2", "#ffccbc", "#d1c4e9", "#b2ebf2", "#fff9c4"];
 
 // Observe the container for changes
+// Here we are creating a MutationObserver to log changes in the container
+// MutationObserver watches the DOM for changes
+// Its callback receives an array of MutationRecords called mutations each time something it’s watching changes
 const observer = new MutationObserver(mutations => {
   mutations.forEach(mutation => {
     let msg = `[${new Date().toLocaleTimeString()}] `;
