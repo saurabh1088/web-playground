@@ -33,7 +33,15 @@ const observer = new MutationObserver(mutations => {
     } else if (mutation.type === 'attributes') {
       msg += `Attribute changed on: ${mutation.target.className}`;
     }
-    observerLog.textContent += msg + '\n';
+
+    // Create a new div element for the message
+    const logEntry = document.createElement('div');
+    logEntry.textContent = msg;
+
+    // Append the new element to the log container
+    observerLog.appendChild(logEntry);
+
+    // Scroll to the bottom of the log
     observerLog.scrollTop = observerLog.scrollHeight;
   });
 });
