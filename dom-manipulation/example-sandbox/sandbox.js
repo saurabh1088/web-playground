@@ -29,3 +29,8 @@ if (firstHeadingFromAllHeadings && headingById && headingByQuerySelector) {
     console.log('headingById after h1 update:', headingById.textContent);
 }
 
+// --- Creating and Appending New Elements ---
+const newHeadingElement = document.createElement('h1');
+newHeadingElement.textContent = 'Newly Created Heading';
+document.body.appendChild(newHeadingElement);
+console.log('New heading appended:', newHeadingElement.textContent);
