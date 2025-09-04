@@ -34,3 +34,8 @@ const newHeadingElement = document.createElement('h1');
 newHeadingElement.textContent = 'Newly Created Heading';
 document.body.appendChild(newHeadingElement);
 console.log('New heading appended:', newHeadingElement.textContent);
+
+// --- Cloning Elements ---
+const clonedHeading = newHeadingElement.cloneNode(true);
+document.body.appendChild(clonedHeading);
+console.log('Cloned heading appended:', clonedHeading.textContent);
