@@ -46,3 +46,16 @@ const textNode = document.createTextNode('This is a text node inside a div.');
 newDivElement.appendChild(textNode);
 document.body.appendChild(newDivElement);
 console.log('New div with text node appended:', newDivElement.textContent);
+
+// --- Event Listener Example ---
+const changeTextButton = document.getElementById('change-text-btn');
+if (changeTextButton) {
+    changeTextButton.addEventListener('click', () => {
+        if (firstHeadingFromAllHeadings) {
+            firstHeadingFromAllHeadings.textContent = 'Text Changed via Button Click!';
+            console.log('Button clicked: h1 text changed.');
+        }
+    });
+} else {
+    console.log('Button with id "change-text-btn" not found.');
+}
