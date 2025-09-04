@@ -39,3 +39,10 @@ console.log('New heading appended:', newHeadingElement.textContent);
 const clonedHeading = newHeadingElement.cloneNode(true);
 document.body.appendChild(clonedHeading);
 console.log('Cloned heading appended:', clonedHeading.textContent);
+
+// --- Create text node and append it to a div ---
+const newDivElement = document.createElement('div');
+const textNode = document.createTextNode('This is a text node inside a div.');
+newDivElement.appendChild(textNode);
+document.body.appendChild(newDivElement);
+console.log('New div with text node appended:', newDivElement.textContent);
